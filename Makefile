@@ -52,7 +52,32 @@ test_pr:
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
 
-test: check_urls
+standardize-data: src/information_resource_registry/standardization/standardize.py infores_catalog.yaml
+	$(RUN) python $^ --in-place --schema src/information_resource_registry/schema/information_resource_registry.yaml
+
+update-fairshare-xrefs: src/information_resource_registry/generate_lexical_mappings.py infores_catalog.yaml
+	$(RUN) python $^
+
+sync-rtx-kg2: src/information_resource_registry/translator_dataflow/sync_rtx_kg2_data.py infores_catalog.yaml
+	$(RUN) python $<
+
+check_standardized:
+	@echo "Checking if infores_catalog.yaml is properly standardized..."
+	@cp infores_catalog.yaml /tmp/infores_catalog_backup.yaml
+	@$(MAKE) standardize-data
+	@if ! diff -q infores_catalog.yaml /tmp/infores_catalog_backup.yaml > /dev/null 2>&1; then \
+		cp /tmp/infores_catalog_backup.yaml infores_catalog.yaml; \
+		echo ""; \
+		echo "ERROR: infores_catalog.yaml is not properly standardized!"; \
+		echo "Please run: make standardize-data"; \
+		echo ""; \
+		rm -f /tmp/infores_catalog_backup.yaml; \
+		exit 1; \
+	fi
+	@rm -f /tmp/infores_catalog_backup.yaml
+	@echo "infores_catalog.yaml is properly standardized ✓"
+
+test: check_urls check_standardized
 	$(RUN) linkml-validate infores_catalog.yaml -s src/information_resource_registry/schema/information_resource_registry.yaml
 	$(RUN) pytest
 	$(RUN) codespell
