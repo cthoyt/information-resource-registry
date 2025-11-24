@@ -11,7 +11,7 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
-RUN = poetry run
+RUN = uv run
 DOCDIR = docs
 RELEASE_TMPDIR = release-output
 
@@ -31,7 +31,7 @@ help:
 # install any dependencies required for building
 install:
 	git init
-	poetry install
+	uv sync
 .PHONY: install
 
 all: site

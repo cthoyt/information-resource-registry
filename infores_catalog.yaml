@@ -211,6 +211,7 @@ information_resources:
     consumed_by:
       - infores:ars
   - status: released
+    name: Autonomous Relay System
     id: infores:ars
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Autonomous-Relay-System-(ARS)
@@ -248,6 +249,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Automat BindingDB
     id: infores:automat-binding-db
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -683,6 +685,7 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: released
+    name: Automat Reactome
     id: infores:automat-reactome
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -701,6 +704,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Automat ROBOKOP
     id: infores:automat-robokop
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -798,6 +802,7 @@ information_resources:
     name: Basic Formal Ontology
     id: infores:bfo
     xref:
+      - fairsharing:FAIRsharing.wcpd6f
       - http://www.obofoundry.org/ontology/bfo.html
     synonym:
       - BFO
@@ -814,6 +819,15 @@ information_resources:
       - BGEE
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: BHF-UCL Cardiovascular Gene Ontology Initiative
+    id: infores:bhf-ucl
+    xref:
+      - https://www.ucl.ac.uk/cardiovascular/
+    description: >-
+      Curated dataset of cardiovascular-related protein interactions and gene ontology annotations
+      from the
+      British Heart Foundation and University College London. (PSI-MI: MI:1332)
   - status: deprecated
     name: Big Cell Line Association Miner
     id: infores:bigclam
@@ -827,6 +841,7 @@ information_resources:
     name: BiGG Models
     id: infores:bigg-models
     xref:
+      - fairsharing:FAIRsharing.va62ke
       - https://github.com/NCATSTranslator/Translator-All/wiki/BiGG-Models
     synonym:
       - BIGG
@@ -867,12 +882,15 @@ information_resources:
     name: Bio2RDF
     id: infores:bio2rdf
     xref:
+      - fairsharing:FAIRsharing.6gz84c
       - https://bio2rdf.org
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
     name: BioCatalogue
     id: infores:biocatalogue
+    xref:
+      - fairsharing:FAIRsharing.9vT2Wg
     knowledge_level: other
     agent_type: not_provided
   - status: released
@@ -1195,7 +1213,10 @@ information_resources:
     consumed_by:
       - infores:service-provider-trapi
   - status: released
+    name: BioThings Mabs
     id: infores:biothings-mabs
+    xref:
+      - https://biothings.ncats.io/mabs
     knowledge_level: not_provided
     agent_type: not_provided
     consumes:
@@ -1464,6 +1485,7 @@ information_resources:
     name: Biological Spatial Ontology
     id: infores:bspo
     xref:
+      - fairsharing:FAIRsharing.newa3z
       - https://obofoundry.org/ontology/bspo.html
     synonym:
       - BSPO
@@ -1504,6 +1526,14 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: CancerCommons
+    id: infores:cancercommons
+    xref:
+      - https://cancercommons.org/
+    description: >-
+      Nonprofit resource connecting patients, oncologists, and scientists with up-to-date
+      treatment information and molecular data.
+  - status: released
     name: Multiomics Pharmacogenomics KP API
     id: infores:catrax-pharmacogenomics
     xref:
@@ -1529,13 +1559,6 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: released
-    id: infores:catrax-pharmacogenomics
-    knowledge_level: not_provided
-    agent_type: not_provided
-    consumed_by:
-      - infores:aragorn
-      - infores:arax
-  - status: released
     name: CEBS
     id: infores:cebs
     xref:
@@ -1560,6 +1583,14 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:catrax-pharmacogenomics
+  - status: released
+    name: Cancer Genome Interpreter (CGI)
+    id: infores:cgi
+    xref:
+      - https://www.cancergenomeinterpreter.org/home
+    description: >-
+      Resource that interprets the biological and clinical relevance of tumor genomic alterations
+      to support precision oncology.
   - status: released
     name: Chemical Entity of Biological Interest
     id: infores:chebi
@@ -1600,6 +1631,7 @@ information_resources:
     name: ChEMBL
     id: infores:chembl
     xref:
+      - fairsharing:FAIRsharing.m3jtpg
       - https://github.com/NCATSTranslator/Translator-All/wiki/ChEMBL
     synonym:
       - Chembl
@@ -1619,15 +1651,24 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Consumer Health Vocabulary (from UMLS)
     id: infores:chv-umls
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - http://consumerhealthvocab.org/
+      - http://consumerhealthvocab.org/docs/README.pdf
+      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/
+    description: >-
+      CHV connects informal, common words and phrases about health to technical terms
+      used by health care professionals. It includes jargon, slang, ambiguous, and misspelled
+      words as used by consumers and health care professionals. OAC CHV is designed to complement
+      the existing framework of the UMLS and to aid the needs of consumer health applications,
+      enabling these applications to translate technical terms to consumer friendly language.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: Clinital Interpretation of Variants in Cancer
+    name: Clinical Interpretation of Variants in Cancer
     id: infores:civic
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/civic
@@ -1638,9 +1679,17 @@ information_resources:
     consumed_by:
       - infores:myvariant-info
   - status: released
+    name: Cancer KnowledgeBase CORE – Genomenon (CKB-CORE)
+    id: infores:ckb-core
+    xref:
+      - https://ckb.genomenon.com/
+    description: >-
+      Commercially curated database of actionable cancer variants and targeted therapies.
+  - status: released
     name: Cell Ontology
     id: infores:cl
     xref:
+      - fairsharing:FAIRsharing.j9y503
       - https://github.com/NCATSTranslator/Translator-All/wiki/CL
     synonym:
       - CL
@@ -1648,6 +1697,21 @@ information_resources:
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
+  - status: released
+    name: Clearity Foundation Biomarkers
+    id: infores:clearity-biomarkers
+    xref:
+      - https://ocrahope.org/clearity-has-joined-ocra/
+    description: >-
+      Dataset of biomarkers and treatment options for ovarian cancer compiled by the Clearity
+      Foundation.
+  - status: released
+    name: Clearity Foundation Clinical Trial
+    id: infores:clearity-clinical-trial
+    xref:
+      - https://ocrahope.org/clearity-has-joined-ocra/
+    description: >-
+      Clinical trial information for ovarian cancer from the Clearity Foundation initiative.
   - status: released
     name: Clinical Genome Resource (ClinGen)
     id: infores:clingen
@@ -1671,6 +1735,7 @@ information_resources:
     name: ClinicalTrials.gov
     id: infores:clinicaltrials
     xref:
+      - fairsharing:FAIRsharing.mewhad
       - https://clinicaltrials.gov
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -1678,6 +1743,7 @@ information_resources:
     name: ClinVar
     id: infores:clinvar
     xref:
+      - fairsharing:FAIRsharing.wx5r6f
       - https://github.com/NCATSTranslator/Translator-All/wiki/clinvar
     description: >-
       ClinVar is a freely accessible, public archive of reports of the
@@ -1860,6 +1926,7 @@ information_resources:
     name: Complex Portal
     id: infores:complex-portal
     xref:
+      - fairsharing:FAIRsharing.wP3t2L
       - https://github.com/NCATSTranslator/Translator-All/wiki/Complex-Portal
     description: >-
       The Complex Portal is a manually curated, encyclopaedic resource of macromolecular
@@ -1872,6 +1939,14 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:service-provider-trapi
+  - status: released
+    name: EMBL-EBI Complex Portal
+    id: infores:complexportal
+    xref:
+      - https://www.ebi.ac.uk/complexportal
+    description: >-
+      Manually curated definitions of stable macromolecular complexes with composition,
+      function, and cross-references; integrated with IntAct. (PSI-MI: MI:0954)
   - status: released
     name: Connections Hypothesis Provider API
     id: infores:connections-hypothesis
@@ -1971,6 +2046,7 @@ information_resources:
     name: Comparative Toxicogenomics Database
     id: infores:ctd
     xref:
+      - fairsharing:FAIRsharing.h3tjtr
       - https://github.com/NCATSTranslator/Translator-All/wiki/CTD
     synonym:
       - CTDbase
@@ -2112,6 +2188,7 @@ information_resources:
     name: dictyBase
     id: infores:dictybase
     xref:
+      - fairsharing:FAIRsharing.4shj9c
       - http://dictybase.org
     description: >-
       The central resource for Dictyostelid genomics, providing model organism database
@@ -2124,9 +2201,18 @@ information_resources:
     knowledge_level: statistical_association
     agent_type: not_provided
   - status: released
+    name: Database of Interacting Proteins (DIP)
+    id: infores:dip
+    xref:
+      - https://dip.doe-mbi.ucla.edu/
+    description: >-
+      One of the earliest curated repositories of experimentally observed protein–protein
+      interactions. (PSI-MI: MI:0465)
+  - status: released
     name: Disease Ontology
     id: infores:disease-ontology
     xref:
+      - fairsharing:FAIRsharing.8b6wfq
       - https://github.com/NCATSTranslator/Translator-All/wiki/disease-ontology
     synonym:
       - DO
@@ -2156,6 +2242,7 @@ information_resources:
     name: DisGeNET
     id: infores:disgenet
     xref:
+      - fairsharing:FAIRsharing.fssydn
       - https://github.com/NCATSTranslator/Translator-All/wiki/DisGeNET
     knowledge_level: prediction
     agent_type: automated_agent
@@ -2166,6 +2253,7 @@ information_resources:
     name: DisProt
     id: infores:disprot
     xref:
+      - fairsharing:FAIRsharing.dt9z89
       - https://www.disprot.org
     description: >-
       A database of intrinsically disordered proteins that provides manually curated
@@ -2189,12 +2277,38 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
-    name: Database of knowledge_assertion Mutations
+    name: Database of Cancer Mutations
     id: infores:docm
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/docm
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Dogpark Tier 0
+    id: infores:dogpark-tier0
+    xref:
+      - https://github.com/NCATSTranslator/DogPark-Ranger
+    description: >-
+      Centralized graph-based knowledge hosting
+    knowledge_level: mixed
+    agent_type: not_provided
+    consumes:
+      - infores:rtx-kg2
+    consumed_by:
+      - infores:retriever
+  - status: released
+    name: Dogpark Tier 1
+    id: infores:dogpark-tier1
+    xref:
+      - https://github.com/NCATSTranslator/DogPark-Ranger
+    description: >-
+      Centralized index-based knowledge hosting
+    knowledge_level: mixed
+    agent_type: not_provided
+    consumes:
+      - infores:rtx-kg2
+    consumed_by:
+      - infores:retriever
   - status: released
     name: Drug Design Data Resource
     id: infores:drug-design
@@ -2224,6 +2338,7 @@ information_resources:
     name: DrugBank
     id: infores:drugbank
     xref:
+      - fairsharing:FAIRsharing.353yat
       - https://github.com/NCATSTranslator/Translator-All/wiki/DrugBank
     synonym:
       - Drugbank
@@ -2243,6 +2358,7 @@ information_resources:
     name: DrugCentral
     id: infores:drugcentral
     xref:
+      - fairsharing:FAIRsharing.3me82d
       - https://github.com/NCATSTranslator/Translator-All/wiki/DrugCentral
     synonym:
       - Drugcentral
@@ -2280,6 +2396,14 @@ information_resources:
     consumed_by:
       - infores:molepro
   - status: released
+    name: Drug Target Commons (DTC)
+    id: infores:dtc
+    xref:
+      - http://www.drugtargetcommons.org/
+    description: >-
+      Community-driven bioactivity database for drug–target interactions supporting quantitative
+      pharmacology.
+  - status: released
     name: European Bioinformatics Institute
     id: infores:ebi
     xref:
@@ -2288,11 +2412,13 @@ information_resources:
       - EBI
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-  - status: modified
+  - status: deprecated
     name: European Bioinformatics Institute Gene to Phenotype Resource
     id: infores:ebi-gene2phenotype
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/ebi-gene2phenotype
+    description: >-
+      This entry has been deprecated. Please use infores:gene2phenotype instead.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -2358,6 +2484,7 @@ information_resources:
     name: Experimental Factor Ontology
     id: infores:efo
     xref:
+      - fairsharing:FAIRsharing.1gr4tz
       - https://github.com/NCATSTranslator/Translator-All/wiki/EFO
     synonym:
       - EFO
@@ -2380,6 +2507,7 @@ information_resources:
     name: Mouse Developmental Anatomy Ontology
     id: infores:emapa
     xref:
+      - fairsharing:FAIRsharing.j0fa1d
       - https://obofoundry.org/ontology/emapa.html
     synonym:
       - EMAPA
@@ -2388,6 +2516,21 @@ information_resources:
       stages.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Embiology
+    id: infores:embiology
+    xref:
+      - https://www.embiology.com
+    description: >-
+      EmBiology is a web-based knowledge graph developed by Elsevier that integrates biological
+      relationships across  genes, proteins, diseases, pathways, and small molecules. It
+      combines text-mined evidence from scientific  literature with curated database content
+      to capture causal, regulatory, and associative connections among  biological entities.
+      Updated weekly, EmBiology supports interactive exploration and visualization of biological  mechanisms,
+      enabling target discovery, biomarker identification, and hypothesis generation in
+      drug discovery and  translational research.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Ensembl gene
     id: infores:ensembl-gene
@@ -2469,6 +2612,7 @@ information_resources:
     name: FlyBase Controlled Vocabulary
     id: infores:fbcv
     xref:
+      - fairsharing:FAIRsharing.6tgyxf
       - https://obofoundry.org/ontology/fbcv.html
     synonym:
       - FBcv
@@ -2480,6 +2624,7 @@ information_resources:
     name: Drosophila Developmental Ontology
     id: infores:fbdv
     xref:
+      - fairsharing:FAIRsharing.p52pzj
       - https://obofoundry.org/ontology/fbdv.html
     synonym:
       - FBdv
@@ -2498,6 +2643,13 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:mychem-info
+  - status: released
+    name: FDA Pharmacogenomic Biomarkers in Drug Labeling
+    id: infores:fda-pgx
+    xref:
+      - https://www.fda.gov/drugs/science-and-research-drugs/table-pharmacogenomic-biomarkers-drug-labeling
+    description: >-
+      FDA resource listing pharmacogenomic biomarkers included in drug labeling.
   - status: released
     name: FDA Pharmacogenomics Biomarker table
     id: infores:fda-pharmacogenomics-biomarker
@@ -2525,6 +2677,7 @@ information_resources:
     name: FlyBase
     id: infores:flybase
     xref:
+      - fairsharing:FAIRsharing.wrvze3
       - https://flybase.org
     synonym:
       - FlyBase
@@ -2572,6 +2725,7 @@ information_resources:
     consumed_by:
       - infores:biothings-fooddata-central
   - status: released
+    name: FooDB
     id: infores:fooddb
     knowledge_level: not_provided
     agent_type: not_provided
@@ -2581,6 +2735,7 @@ information_resources:
     name: Food Ontology
     id: infores:foodon
     xref:
+      - fairsharing:FAIRsharing.dzxae
       - http://www.obofoundry.org/ontology/foodon.html
     synonym:
       - FOODON
@@ -2592,6 +2747,7 @@ information_resources:
     name: Fission Yeast Phenotype Ontology
     id: infores:fypo
     xref:
+      - fairsharing:FAIRsharing.4vr0ys
       - https://obofoundry.org/ontology/fypo.html
     synonym:
       - FYPO
@@ -2620,6 +2776,7 @@ information_resources:
     consumed_by:
       - infores:biothings-multiomics-biggim-drugresponse
   - status: released
+    name: GeLiNEA
     id: infores:gelinea
     xref:
       - https://github.com/broadinstitute/GeLiNEA
@@ -2660,6 +2817,25 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Gene2Phenotype
+    id: infores:gene2phenotype
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/gene2phenotype
+      - https://www.ebi.ac.uk/gene2phenotype
+      - https://www.ebi.ac.uk/gene2phenotype/about/project
+    synonym:
+      - G2P
+    description: >-
+      G2P is a publicly-accessible online system designed to facilitate development, validation,
+      curation and distribution of large-scale, evidence-based datasets for diagnostic variant
+      filtering. Each entry associates an allelic requirement and mutational consequence
+      at a defined locus with a disease entity, including assigned confidence levels and
+      evidence links.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:biothings-ebi-gene2phenotype
+  - status: released
     name: 'Genebass: Gene-based association summary statistics'
     id: infores:genebass
     xref:
@@ -2677,6 +2853,7 @@ information_resources:
     name: Genomic Epidemiology Ontology
     id: infores:genepio
     xref:
+      - fairsharing:FAIRsharing.y1mmbv
       - https://genepio.org/
     synonym:
       - GenEpiO
@@ -2688,6 +2865,7 @@ information_resources:
     name: GeneProf
     id: infores:geneprof
     xref:
+      - fairsharing:FAIRsharing.qmygaa
       - https://github.com/NCATSTranslator/Translator-All/wiki/GeneProf
     description: >-
       underlying resource is throwing 404 error atm
@@ -2731,6 +2909,7 @@ information_resources:
     name: Gene Ontology
     id: infores:go
     xref:
+      - fairsharing:FAIRsharing.6xq0ee
       - https://github.com/NCATSTranslator/Translator-All/wiki/go
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
@@ -2814,7 +2993,7 @@ information_resources:
     consumed_by:
       - infores:biothings-multiomics-biggim-drugresponse
   - status: released
-    name: Guide to Pharmacology
+    name: Guide to Pharmacology Database
     id: infores:gtopdb
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/GtoPdb
@@ -2873,6 +3052,7 @@ information_resources:
     name: HUGO Gene Nomenclature Committee
     id: infores:hgnc
     xref:
+      - fairsharing:FAIRsharing.29we0s
       - https://github.com/NCATSTranslator/Translator-All/wiki/HGNC
     synonym:
       - HGNC
@@ -2934,9 +3114,18 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Host–Pathogen Interaction Database (HPIDB)
+    id: infores:hpidb
+    xref:
+      - https://hpidb.igbb.msstate.edu/
+    description: >-
+      Curated host–pathogen protein interaction resource covering multiple species and pathogens.
+      (PSI-MI: MI:1335)
+  - status: released
     name: Human Phenotype Ontology
     id: infores:hpo
     xref:
+      - fairsharing:FAIRsharing.kbtt7f
       - https://github.com/NCATSTranslator/Translator-All/wiki/HPO
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
@@ -2948,6 +3137,7 @@ information_resources:
     name: Human Phenotype Ontology
     id: infores:hpo-annotations
     xref:
+      - fairsharing:FAIRsharing.kbtt7f
       - https://github.com/NCATSTranslator/Translator-All/wiki/HPO-Annotations
     synonym:
       - HPO Annotations
@@ -2960,6 +3150,7 @@ information_resources:
     name: Human Developmental Stages Ontology
     id: infores:hsapdv
     xref:
+      - fairsharing:FAIRsharing.c6vhm3
       - https://obofoundry.org/ontology/hsapdv.html
     synonym:
       - HsapDv
@@ -2991,6 +3182,15 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:biothings-multiomics-biggim-drugresponse
+  - status: released
+    name: Interologous Interaction Database (I2D)
+    id: infores:i2d
+    xref:
+      - https://ophid.utoronto.ca/i2d
+    description: >-
+      Aggregates experimentally validated and orthology-transferred protein–protein interactions
+      across species.
+      (PSI-MI: MI:0911)
   - status: released
     name: ICD10 (from UMLS)
     id: infores:icd10-umls
@@ -3082,6 +3282,14 @@ information_resources:
     consumed_by:
       - infores:biothings-idisk
   - status: released
+    name: International Molecular Exchange Consortium (IMEx)
+    id: infores:imex
+    xref:
+      - https://www.imexconsortium.org/
+    description: >-
+      Consortium coordinating standards and shared curation for molecular interaction data
+      integrated by partners including IntAct. (PSI-MI: MI:0959)
+  - status: released
     name: imProving Agent
     id: infores:improving-agent
     xref:
@@ -3105,6 +3313,7 @@ information_resources:
     name: InnateDB
     id: infores:innatedb
     xref:
+      - fairsharing:FAIRsharing.rb2drw
       - https://github.com/NCATSTranslator/Translator-All/wiki/InnateDB
     description: >-
       InnateDB is a publicly available database of the genes, proteins, experimentally-verified
@@ -3122,6 +3331,7 @@ information_resources:
     name: Interaction Network Ontology
     id: infores:ino
     xref:
+      - fairsharing:FAIRsharing.mm72as
       - http://www.obofoundry.org/ontology/ino.html
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
@@ -3132,6 +3342,10 @@ information_resources:
     id: infores:intact
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/IntAct
+    description: >-
+      EMBL-EBI’s core manually curated molecular interaction knowledgebase using PSI-MI
+      standards;
+      primary IMEx curation and hosting platform. "(PSI-MI: MI:0469)"
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3379,9 +3593,18 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
+    name: MatrixDB
+    id: infores:matrixdb
+    xref:
+      - https://matrixdb.univ-lyon1.fr/
+    description: >-
+      Specialized resource for interactions involving extracellular matrix components,
+      glycoproteins, and polysaccharides. (PSI-MI: MI:0950)
+  - status: released
     name: Medical Action Ontology
     id: infores:maxo
     xref:
+      - fairsharing:FAIRsharing.945c78
       - http://www.obofoundry.org/ontology/maxo.html
     synonym:
       - MAXO
@@ -3389,6 +3612,15 @@ information_resources:
       see also https://github.com/monarch-initiative/MAxO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Mitochondrial Biology Information System (MBInfo)
+    id: infores:mbinfo
+    xref:
+      - https://www.mitobinfo.org/
+    description: >-
+      Specialized database focused on mitochondrial protein interactions, processes, and
+      pathways;
+      provides curated mitochondrial PPIs integrated through MIntAct. (PSI-MI: MI:1222)
   - status: released
     name: MedDRA (from UMLS)
     id: infores:meddra-umls
@@ -3483,6 +3715,15 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
+    name: Molecular INTeraction Database (MINT)
+    id: infores:mint
+    xref:
+      - https://mint.bio.uniroma2.it/
+    description: >-
+      Literature-curated experimentally verified protein–protein interactions from the University
+      of Rome;
+      now curated within IntAct under the MIntAct model. (PSI-MI: MI:0471)
+  - status: released
     name: The microRNA Database
     id: infores:mirbase
     xref:
@@ -3567,6 +3808,7 @@ information_resources:
     name: Monarch Initiative
     id: infores:monarchinitiative
     xref:
+      - fairsharing:FAIRsharing.2c5132
       - https://github.com/NCATSTranslator/Translator-All/wiki/Monarch-Initiative
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -3589,6 +3831,7 @@ information_resources:
     name: Molecular Process Ontology
     id: infores:mop
     xref:
+      - fairsharing:FAIRsharing.mct09a
       - http://www.obofoundry.org/ontology/mop.html
     synonym:
       - MOP
@@ -3607,6 +3850,7 @@ information_resources:
     name: Mammalian Phenotype Ontology
     id: infores:mp
     xref:
+      - fairsharing:FAIRsharing.kg1x4z
       - https://obofoundry.org/ontology/mp.html
     description: >-
       Standard terms for annotating mammalian phenotypic data.
@@ -3692,6 +3936,21 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
+  - status: released
+    name: My Cancer Genome
+    id: infores:mycancergenome
+    xref:
+      - https://www.mycancergenome.org/
+    description: >-
+      Knowledgebase providing up-to-date information on cancer gene variants and targeted
+      therapies.
+  - status: released
+    name: My Cancer Genome Clinical Trial
+    id: infores:mycancergenome-trials
+    xref:
+      - https://www.mycancergenome.org/
+    description: >-
+      Clinical trial data linked to molecular cancer variants curated by My Cancer Genome.
   - status: released
     name: MyChem.info API
     id: infores:mychem-info
@@ -3794,6 +4053,7 @@ information_resources:
     name: Neuro Behavior Ontology
     id: infores:nbo
     xref:
+      - fairsharing:FAIRsharing.pktgc6
       - https://github.com/NCATSTranslator/Translator-All/wiki/NBO
     synonym:
       - NBO
@@ -3802,8 +4062,8 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator Autonomous
-      Relay System
+    name: National Center for Advancing Translational Science Biomedical Data Translator
+      Autonomous Relay System
     id: infores:ncats-ars
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Autonomous-Relay-System-(ARS)
@@ -3848,8 +4108,8 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding Operations
-      Exposures Data
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
+      Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -3952,6 +4212,7 @@ information_resources:
     name: Ontology of Biological Attributes
     id: infores:oba
     xref:
+      - fairsharing:FAIRsharing.mp0rwf
       - https://obofoundry.org/ontology/oba.html
     synonym:
       - OBA
@@ -4016,6 +4277,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: OMOP (OHDSI)
     id: infores:omop-ohdsi
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -4024,8 +4286,8 @@ information_resources:
     consumed_by:
       - infores:cohd
   - status: released
-    name: Observational Medical Outcomes Partnership Observational Health Data Sciences and
-      Informatics API
+    name: Observational Medical Outcomes Partnership Observational Health Data Sciences 
+      and Informatics API
     id: infores:omop-ohdsi-api
     xref:
       - https://chime.ucsf.edu/observational-medical-outcomes-partnership-omop
@@ -4034,9 +4296,18 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: OncoKB
+    id: infores:oncokb
+    xref:
+      - https://www.oncokb.org/
+    description: >-
+      Precision oncology knowledgebase linking somatic mutations to clinical evidence levels
+      and therapies.
+  - status: released
     name: Open Targets
     id: infores:open-targets
     xref:
+      - fairsharing:FAIRsharing.3f9n4y
       - https://www.opentargets.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -4095,6 +4366,7 @@ information_resources:
     name: Orphanet
     id: infores:orphanet
     xref:
+      - fairsharing:FAIRsharing.6bd5k6
       - https://www.orpha.net
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -4136,6 +4408,7 @@ information_resources:
     name: Pathway Commons
     id: infores:pathway-commons
     xref:
+      - fairsharing:FAIRsharing.5y3gdd
       - https://www.pathwaycommons.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -4254,6 +4527,7 @@ information_resources:
     name: Pharos
     id: infores:pharos
     xref:
+      - fairsharing:FAIRsharing.52d6ae
       - https://github.com/NCATSTranslator/Translator-All/wiki/Pharos
     description: >-
       focusing on three of the most commonly drug-targeted protein families:
@@ -4290,6 +4564,7 @@ information_resources:
     name: Protein Ontology
     id: infores:pr
     xref:
+      - fairsharing:FAIRsharing.4ndncv
       - https://proconsortium.org/
     synonym:
       - PRO
@@ -4370,6 +4645,7 @@ information_resources:
     name: PubChem
     id: infores:pubchem
     xref:
+      - fairsharing:FAIRsharing.qt3w7z
       - https://pubchem.ncbi.nlm.nih.gov/
     description: >-
       an open chemistry database at the National Institutes of Health (NIH),
@@ -4383,6 +4659,7 @@ information_resources:
     name: PubMed
     id: infores:pubmed
     xref:
+      - fairsharing:FAIRsharing.a5sv8m
       - https://pubmed.ncbi.nlm.nih.gov/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -4393,6 +4670,7 @@ information_resources:
     name: PubMed Central
     id: infores:pubmed-central
     xref:
+      - fairsharing:FAIRsharing.wpt5mp
       - https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/
     synonym:
       - PMC
@@ -4446,6 +4724,7 @@ information_resources:
     name: Reactome
     id: infores:reactome
     xref:
+      - fairsharing:FAIRsharing.tf6kj8
       - https://github.com/NCATSTranslator/Translator-All/wiki/reactome
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
@@ -4453,6 +4732,20 @@ information_resources:
       - infores:molepro
       - infores:mygene-info
       - infores:rtx-kg2
+  - status: released
+    name: RefMet - A Reference list of Metabolite names
+    id: infores:refmet
+    xref:
+      - https://www.metabolomicsworkbench.org/databases/refmet/index.php
+    description: >-
+      RefMet provides a standardized reference nomenclature for both discrete metabolite
+      structures and metabolite species identified by spectroscopic techniques in metabolomics
+      experiments. The resource curates over 700,000 metabolite names from 3,500+ MS and
+      NMR studies into a standardized analytical chemistry-focused nomenclature system,
+      enabling researchers to compare and contrast metabolite data across different experiments
+      and studies.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Richards Effector Gene List
     id: infores:regl
@@ -4492,9 +4785,13 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     consumes:
-      - infores:automat-robokopkg
+      - infores:dogpark-tier0
+      - infores:dogpark-tier1
     consumed_by:
       - infores:shepherd-aragorn
+      - infores:shepherd-arax
+      - infores:shepherd-bte
+      - infores:shepherd-sipr
   - status: released
     name: RGD API
     id: infores:rgd
@@ -4508,6 +4805,7 @@ information_resources:
     name: Rhea
     id: infores:rhea
     xref:
+      - fairsharing:FAIRsharing.pn1sr5
       - https://github.com/NCATSTranslator/Translator-All/wiki/rhea
     description: >-
       https://www.rhea-db.org/
@@ -4519,6 +4817,7 @@ information_resources:
     name: RNAcentral
     id: infores:rnacentral
     xref:
+      - fairsharing:FAIRsharing.KcCjL7
       - https://rnacentral.org
     description: >-
       A comprehensive database of non-coding RNA sequences that provides a single access
@@ -4558,7 +4857,8 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -4672,6 +4972,7 @@ information_resources:
     name: RxNorm
     id: infores:rxnorm
     xref:
+      - fairsharing:FAIRsharing.36pf8q
       - https://github.com/NCATSTranslator/Translator-All/wiki/RxNORM
     description: >-
       normalized names for clinical drugs and links its names to many of
@@ -4687,6 +4988,7 @@ information_resources:
     name: SABIO-RK Biochemical Reaction Kinetics Database
     id: infores:sabio-rk
     xref:
+      - fairsharing:FAIRsharing.cwx04e
       - https://www.h-its.org/projects/sabio-rk-biochemical-reaction-kinetics-database/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -4708,6 +5010,7 @@ information_resources:
       - infores:biothings-semmeddb
       - infores:rtx-kg2
   - status: released
+    name: SEPID MAB
     id: infores:sepid_mab
     knowledge_level: not_provided
     agent_type: not_provided
@@ -4795,6 +5098,7 @@ information_resources:
     name: Saccharomyces Genome Database
     id: infores:sgd
     xref:
+      - fairsharing:FAIRsharing.pzvw40
       - http://www.yeastgenome.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -4806,6 +5110,48 @@ information_resources:
     description: >-
       Shepherd Aragorn: The Aragorn ARA implementation within the
       Shepherd platform.
+    knowledge_level: prediction
+    agent_type: not_provided
+    consumes:
+      - infores:retriever
+    consumed_by:
+      - infores:ars
+  - status: released
+    name: Shepherd ARAX ARA
+    id: infores:shepherd-arax
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    description: >-
+      Shepherd ARAX: The ARAX ARA implementation within the
+      Shepherd platform.
+    knowledge_level: prediction
+    agent_type: not_provided
+    consumes:
+      - infores:retriever
+    consumed_by:
+      - infores:ars
+  - status: released
+    name: Shepherd BTE ARA
+    id: infores:shepherd-bte
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    description: >-
+      Shepherd BTE: The BTE ARA implementation within the
+      Shepherd platform.
+    knowledge_level: prediction
+    agent_type: not_provided
+    consumes:
+      - infores:retriever
+    consumed_by:
+      - infores:ars
+  - status: released
+    name: Shepherd SIPR ARA
+    id: infores:shepherd-sipr
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    description: >-
+      Shepherd SIPR: The SIPR ARA implementation within the
+      Shepherd platform. Uses Page Rank algorithm for Set Input Queries.
     knowledge_level: prediction
     agent_type: not_provided
     consumes:
@@ -4887,6 +5233,7 @@ information_resources:
     name: Sequence Ontology
     id: infores:so
     xref:
+      - fairsharing:FAIRsharing.6bc7h9
       - http://purl.obolibrary.org/obo/so.owl
     synonym:
       - SO
@@ -5059,6 +5406,7 @@ information_resources:
     name: Symptom Ontology
     id: infores:symp
     xref:
+      - fairsharing:FAIRsharing.ay74mj
       - http://www.obofoundry.org/ontology/symp.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -5077,6 +5425,7 @@ information_resources:
     name: Target Central Resource Database
     id: infores:tcrd
     xref:
+      - fairsharing:FAIRsharing.1gn47b
       - http://juniper.health.unm.edu/tcrd/
     synonym:
       - TCRD
@@ -5129,6 +5478,7 @@ information_resources:
     name: Target Illumination GWAS Analytics
     id: infores:tiga
     xref:
+      - fairsharing:FAIRsharing.beffb7
       - https://github.com/NCATSTranslator/Translator-All/wiki/TIGA
     synonym:
       - TIGA
@@ -5141,6 +5491,7 @@ information_resources:
     name: TISSUES
     id: infores:tissues
     xref:
+      - fairsharing:FAIRsharing.yXPvpU
       - https://github.com/NCATSTranslator/Translator-All/wiki/TISSUES
     description: >-
       TISSUES is a weekly updated web resource that integrates evidence on tissue expression  from
@@ -5200,6 +5551,7 @@ information_resources:
     name: Uber Anatomy Ontology
     id: infores:uberon
     xref:
+      - fairsharing:FAIRsharing.4c0b6b
       - https://github.com/NCATSTranslator/Translator-All/wiki/Uberon
     synonym:
       - Uberon
@@ -5257,6 +5609,7 @@ information_resources:
     name: UniProt Knowledgebase
     id: infores:uniprot
     xref:
+      - fairsharing:FAIRsharing.s1ne3g
       - https://github.com/NCATSTranslator/Translator-All/wiki/UniProt
     synonym:
       - UniProt
@@ -5324,7 +5677,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -5363,6 +5717,7 @@ information_resources:
     name: C. elegans phenotype
     id: infores:wbphenotype
     xref:
+      - fairsharing:FAIRsharing.agvc7y
       - https://obofoundry.org/ontology/wbphenotype.html
     synonym:
       - WBPhenotype
@@ -5374,6 +5729,7 @@ information_resources:
     name: Wikidata
     id: infores:wikidata
     xref:
+      - fairsharing:FAIRsharing.6s749p
       - https://wikidata.org
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -5388,6 +5744,7 @@ information_resources:
     name: WikiPathways
     id: infores:wikipathways
     xref:
+      - fairsharing:FAIRsharing.1x53qk
       - https://github.com/NCATSTranslator/Translator-All/wiki/WikiPathways
     description: >-
       WikiPathways is an open science platform for biological pathways contributed, updated,
@@ -5407,6 +5764,7 @@ information_resources:
     name: WormBase
     id: infores:wormbase
     xref:
+      - fairsharing:FAIRsharing.zx1td8
       - http://www.wormbase.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -5414,6 +5772,7 @@ information_resources:
     name: Xenopus Anatomy Ontology
     id: infores:xao
     xref:
+      - fairsharing:FAIRsharing.17zapb
       - https://obofoundry.org/ontology/xao.html
     synonym:
       - XAO
